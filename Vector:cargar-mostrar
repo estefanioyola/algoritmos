@@ -1,0 +1,32 @@
+// vector.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+#define TAM 100
+using namespace std;
+void cargarvector (int vec[] ,int n);														
+void mostrarvector (int vec[] ,int n);
+void main()
+{int v[TAM],m;
+ do
+ {cout<<"Ingrese el tamano: ";
+  cin>>m;
+ }while ((m>TAM)||(m<=0));
+ cargarvector(v,m);
+ mostrarvector(v,m);
+ getch();
+}
+void cargarvector (int vec[],int n)
+{for(int i=0;i<n;i++)
+ {cout<<"Ingrese un dato:";
+  cin>>vec[i];
+ }
+}
+void mostrarvector (int vec[],int n)
+{for(int i=0;i<n;i++)
+ {cout<<vec[i]<<"\n";
+ }
+}
